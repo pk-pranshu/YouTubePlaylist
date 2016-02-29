@@ -8,6 +8,7 @@ A simple playlist of videos from YouTube API
 * Open browser and go to URL Server is running at http://localhost:8080
 * The default selected Atrist is displayed
 * Check out the top music of other atrist using the dropdown
+
 ## Design Decisions
 * This is a Node JS based simple and easy to use application
 * Express JS is used to create a server listening on a specific port
