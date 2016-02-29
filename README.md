@@ -1,6 +1,6 @@
-YouTube Playlist
+# YouTube Playlist
 A simple playlist of videos from YouTube API
-Instructions to run the App
+## Instructions to run the App
 * Download the zip file from this repo
 * Uzip and cd into the folder
 * Make sure nodeJS is installed in your system
@@ -8,7 +8,7 @@ Instructions to run the App
 * Open browser and go to URL Server is running at http://localhost:8080
 * The default selected Atrist is displayed
 * Check out the top music of other atrist using the dropdown
-Design Decisions
+## Design Decisions
 * This is a Node JS based simple and easy to use application
 * Express JS is used to create a server listening on a specific port
 * Some node modules are used to hit the Youtube API and fetch the JSON object
