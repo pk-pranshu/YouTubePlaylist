@@ -1,0 +1,25 @@
+{
+  "name": "youtubeplaylist",
+  "version": "1.0.0",
+  "description": "youtube playlist yahoo",
+  "main": "app.js",
+  "scripts": {
+    "test": "Works fine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pranshu1992"
+  },
+  "keywords": [
+    "youtube",
+    "playlist"
+  ],
+  "author": "Pranshu Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "body-parser": "^1.14.1",
+    "http": "0.0.0",
+    "request":"latest"
+  }
+}

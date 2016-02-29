@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YouTube Playlist</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.min.css">
+</head>
+<body>
+	<div id="topHeading"> 
+		<h2 class="animated infinite tada">Yahoo! Playlist</h2>
+	</div>
+		<form id="searchPlaylist">
+			<select id="searchVideo">
+				<option>Coldplay</option>
+				<option>Metallica</option>
+				<option>Pink Floyd</option>
+				<option>Linkin Park</option>
+				<option>Led Zepplin</option>
+				<option>The Beatles</option>
+			</select>
+		</form>
+
+		<div id="pagePreview"><h1>Top Videos</h1>
+			<div id="topList" ></div>
+		</div>
+		<div id="videoContainer"></div>
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>	
+<script type="text/javascript">
+
+		$(document).ready(function(){
+			function displayVideos(){
+				var keySearchValue = encodeURIComponent($( "#searchVideo option:selected" ).text()).replace(/%20/g, "+");
+			    $.post("/process_get",{bandName: keySearchValue}, function(data, status){
+			       
+					$("#videoContainer").html("");
+					$("#topList").html("");
+					var newData = JSON.parse(data);
+
+		 				$.each(newData.playlistObj, function(i, item) {   		
+							$("#videoContainer").append('<div class="data"><h2>'+newData.playlistObj[i].title+'</h2><iframe class="video w100" width="950" height="480" src="//www.youtube.com/embed/'+newData.playlistObj[i].videoId+'" frameborder="0" allowfullscreen></iframe><hr></div>');
+							$("#topList").append('<ul type="1" class="dataPreview"><li>'+newData.playlistObj[i].title+'</li></ul>');
+						 });
+				    });
+				}
+			displayVideos();
+			$('#searchPlaylist').change(function() {
+			       displayVideos();
+			});
+	});
+</script>
+</html>
