@@ -25,12 +25,9 @@ var request = require('request');
 			}, function (error, response, body) {
 
 			    if (!error && response.statusCode === 200) {
-
 			    	var JSONString = JSON.stringify(body); 
 			    	var JSONParser = JSON.parse(JSONString);
-
 			    		var finalJSONObject = {playlistObj:[]};
-			    		
 			    		for(var i=0 ; i<5 ; i++)
 			    		{
 			    		    finalJSONObject.playlistObj.push({
@@ -38,13 +35,7 @@ var request = require('request');
 			    		    	"title" : JSONParser.items[i].snippet.title
 			    			});
    						}
-			    		//console.log(finalJSONObject);
-			    		
 			    		res.send(JSON.stringify(finalJSONObject));
-
-			    	// console.log(JSONParser.items[1].id.videoId);
-			        // res.end(JSON.stringify(body));
-
 			    }
 		});
 	});

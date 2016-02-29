@@ -19,15 +19,13 @@
 				<option>The Beatles</option>
 			</select>
 		</form>
-
-		<div id="pagePreview"><h1>Top Videos</h1>
+	<div id="pagePreview"><h1>Top Videos</h1>
 			<div id="topList" ></div>
-		</div>
-		<div id="videoContainer"></div>
+	</div>
+	<div id="videoContainer"></div>
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>	
 <script type="text/javascript">
-
 		$(document).ready(function(){
 			function displayVideos(){
 				var keySearchValue = encodeURIComponent($( "#searchVideo option:selected" ).text()).replace(/%20/g, "+");
