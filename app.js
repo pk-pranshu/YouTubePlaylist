@@ -18,7 +18,6 @@ var request = require('request');
 		searchKey = req.body.bandName;
 
    		var url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q='+searchKey+'&key='+key;
-
    		request({
 			    url: url,
 			    json: true

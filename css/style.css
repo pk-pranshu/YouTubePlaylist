@@ -1,5 +1,5 @@
 html { 
-  background: url(http://wallarthd.com/wp-content/uploads/2014/12/White-Headphones-Macro-Wallpaper-HD.jpg) no-repeat center center fixed; 
+  background: url(background.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -59,4 +59,15 @@ div.data h2{
   text-align: center; 
   color: #7B0099;
   font-family: verdana;
+}
+#pagePreview p{
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  text-decoration: underline;
+  font-weight: bolder;
 }
